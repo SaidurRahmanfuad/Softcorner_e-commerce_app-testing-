@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Soft Corner</string>
+    <string name="sologan">Find Choose and Buy</string>
+    <string name="button1">Already have an account?Login</string>
+    <string name="button2">Join Now</string>
+    <string name="sign_up">Sign up</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password </string>
+    <string name="prompt_phone">Phone number </string>
+    <string name="softcornerwelcome">Welcome To Soft_Corner </string>
+
+    <string name="sign_in">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+
+    </string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+//navigation strings
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="import_image">Import</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="tools">Tools</string>
+    <string name="slide">Slide show</string>
+    <string name="nav_username">User name</string>
+    <string name="nav_logout">Loge Out</string>
+    <string name="nav_communicate">Communicate</string>
+
+    <string name="gallery">Gallery</string>
+    <string name="cart">Cart</string>
+    <string name="settings">Settings</string>
+    <string name="category">Category</string>
+
+    <string name="order">Orders</string>
+
+</resources>
+
