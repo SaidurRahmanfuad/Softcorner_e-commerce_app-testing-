@@ -28,9 +28,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth=FirebaseAuth.getInstance();
 
-        email =(EditText) findViewById(R.id.login_email);
-        password =(EditText) findViewById(R.id.login_password);
-        sign_in =(Button) findViewById(R.id.login_button);
+        email = findViewById(R.id.login_email);
+        password = findViewById(R.id.login_password);
+        sign_in = findViewById(R.id.login_button);
 
 
 
@@ -38,13 +38,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String signin_email,signin_password;
-                signin_email=email.getText().toString();
-                signin_password=password.getText().toString();
+                String signing_email,signing_password;
+                signing_email=email.getText().toString();
+                signing_password=password.getText().toString();
 
-                //to send data at firebase//
-                if(!TextUtils.isEmpty(signin_email) && !TextUtils.isEmpty(signin_password))
-                    mAuth.signInWithEmailAndPassword(signin_email, signin_password)
+                /* to send data at Firebase// */
+                if(!TextUtils.isEmpty(signing_email) && !TextUtils.isEmpty(signing_password))
+                    mAuth.signInWithEmailAndPassword(signing_email, signing_password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                                         startActivity(i);
                                         finish();
                                     } else {
-                                        String error = task.getException().getMessage();
+                                        String error = Objects.requireNonNull(task.getException()).getMessage();
                                         Toast.makeText(LoginActivity.this, "Error" + error, Toast.LENGTH_SHORT).show();
 
                                     }
@@ -68,12 +68,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-     //Onstart method for check if user is signed in
+     /* Onstart method for check if user is signed in */
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser current_user =mAuth.getCurrentUser();
-        if (current_user !=null)
+        FirebaseUser current_user = mAuth.getCurrentUser();
+        if (current_user!=null)
         {
             Intent home_page = new Intent(LoginActivity.this,HomeActivity.class);
             startActivity(home_page);
